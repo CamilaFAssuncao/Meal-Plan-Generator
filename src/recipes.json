@@ -106,6 +106,12 @@
         "category": "vegetarian",
         "ingredients": ["burguer bread", "portobello mushroom", "flour", "panko", "eggs", "grated cheese"],
         "imageURL": "mushroom-burguer.jpeg"
+      },
+      {
+        "name": "Fries",
+        "category": "vegetarian",
+        "ingredients": ["potatoes"],
+        "imageURL": "fries.jpeg"
       }
     
 ]
