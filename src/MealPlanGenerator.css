@@ -1,0 +1,26 @@
+.meal-plan-container {
+    margin: 20px;
+  }
+  
+  .meal-plan {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  
+  .meal-item {
+    border: 1px solid #ccc;
+    padding: 10px;
+    width: 200px;
+  }
+  
+  .meal-item img {
+    width: 100%;
+    height: auto;
+    cursor: pointer;
+  }
+  
+  .meal-item p {
+    margin: 5px 0;
+  }
+  

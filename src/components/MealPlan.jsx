@@ -1,6 +1,7 @@
 // MealPlan.js
 import React, { useState } from "react";
-import Modal from "./Modal"; // Import a modal component for displaying recipe details
+import styled from 'styled-components';
+import Modal from "../Modal"; // Import a modal component for displaying recipe details
 
 const MealPlan = ({ selectedMeal, recipes }) => {
   const [showModal, setShowModal] = useState(false);
@@ -33,4 +34,14 @@ const MealPlan = ({ selectedMeal, recipes }) => {
 };
 
 export default MealPlan;
+
+
+
+
+
+
+
+
+
+
 
