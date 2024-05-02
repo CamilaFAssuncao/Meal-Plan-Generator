@@ -1,12 +1,11 @@
 import React, { useState } from "react";
-import "./styles.css";
+import styled from "styled-components";
 import recipes from "../recipes.json";
 import logo from "../logo.png";
-import styled from "styled-components";
 
 const AppContainer = styled.div`
   font-family: Arial, sans-serif;
-  min-height:100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
 `;
@@ -25,7 +24,7 @@ const LogoImage = styled.img`
 const MenuTitle = styled.h1`
   font-family: 'Pacifico', cursive;
   margin: 0;
-  color:#345B3F;
+  color: #345B3F;
 `;
 
 const GenerateButton = styled.button`
@@ -37,7 +36,7 @@ const GenerateButton = styled.button`
   border-radius: 12px;
   cursor: pointer;
   transition: background-color 0.3s;
-  
+
   &:hover {
     background-color: #447453;
   }
@@ -48,7 +47,8 @@ const MealItem = styled.p`
 `;
 
 export default function MealPlanGenerator() {
-  const segments = Object.keys(recipes);
+  const [mealPlan, setMealPlan] = useState([]);
+  const [pastaCount, setPastaCount] = useState(0);
 
   const getDayOfWeek = () => {
     const dayOfWeek = new Date().getDay();
@@ -60,7 +60,7 @@ export default function MealPlanGenerator() {
     return meal && meal.category.includes("pasta");
   };
 
-  const getMealOption = (excludedMeals, pastaCount, setPastaCount, currentDay) => {
+  const getMealOption = (excludedMeals, currentDay) => {
     const availableMeals = recipes.filter((recipe) => !excludedMeals.includes(recipe.name));
     let mealOption;
 
@@ -78,44 +78,37 @@ export default function MealPlanGenerator() {
 
     // Update pasta count if the chosen meal is pasta
     if (isPasta(mealOption)) {
-      setPastaCount(pastaCount + 1);
+      setPastaCount((prevPastaCount) => prevPastaCount + 1);
       console.log("Pasta count:", pastaCount + 1); // Log the updated pasta count
     }
 
-    return { mealOption };
-};
-
-
-  const [mealPlan, setMealPlan] = useState([]);
-  const [pastaCount, setPastaCount] = useState(0);
+    return mealOption;
+  };
 
   const generateMealPlan = () => {
     const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     const currentDayOfWeek = getDayOfWeek();
     let excludedMeals = [];
-    let selectedMeals = [];
     let weekPastaCount = 0;
+    let pastaDishes = [];
 
     const generatedPlan = daysOfWeek.map((day, index) => {
       const offset = (currentDayOfWeek + index) % 7; // Calculate the offset correctly
-      let mealOption, newPastaCount;
-      do {
-        ({ mealOption } = getMealOption(excludedMeals, weekPastaCount, setPastaCount, offset));
-
-      } while (selectedMeals.includes(mealOption));
-
+      const mealOption = getMealOption(excludedMeals, offset);
       excludedMeals.push(mealOption);
-      selectedMeals.push(mealOption);
 
       if (isPasta(mealOption)) {
-        weekPastaCount = newPastaCount;
+        weekPastaCount++;
+        pastaDishes.push({ day: daysOfWeek[offset], meal: mealOption });
       }
 
       return { day: daysOfWeek[offset], meal: mealOption };
     });
 
     console.log("Generated meal plan:", generatedPlan);
+    console.log("Pasta dishes in the menu:", pastaDishes);
     setMealPlan(generatedPlan);
+    setPastaCount(0); // Reset pasta count for the next week
   };
 
   return (
@@ -133,6 +126,7 @@ export default function MealPlanGenerator() {
     </AppContainer>
   );
 }
+
 
 
 
