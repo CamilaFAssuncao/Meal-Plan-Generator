@@ -116,7 +116,7 @@
       {
         "name": "Sun Dried Chicken Orzo",
         "category": ["comfy", "pasta"],
-        "ingredients": ["orzo", "lemon juice", "chicken breast", "garlic", "spinach", "stock cube", "parsley", "parmesan cheese"],
+        "ingredients": ["orzo", "sun dried tomatoes", "chicken breast", "garlic", "spinach", "stock cube", "parsley", "parmesan cheese"],
         "imageURL": "/images/chicken-orzo.jpeg"
       },
       {
