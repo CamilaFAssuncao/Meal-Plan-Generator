@@ -116,8 +116,14 @@
       {
         "name": "Sun Dried Chicken Orzo",
         "category": ["comfy", "pasta"],
-        "ingredients": ["orzo", "sun dried tomatoes", "chicken breast", "garlic", "spinach", "stock cube", "cream", "parmesan cheese"],
-        "imageURL": "/images/"
+        "ingredients": ["orzo", "lemon juice", "chicken breast", "garlic", "spinach", "stock cube", "parsley", "parmesan cheese"],
+        "imageURL": "/images/chicken-orzo.jpeg"
+      },
+      {
+        "name": "Lemon Shrimp Orzo",
+        "category": ["comfy", "pasta"],
+        "ingredients": ["orzo", "lemon", "shrimp", "garlic", "asparagus", "stock cube", "cream", "parmesan cheese"],
+        "imageURL": "/images/Lemon-Shrimp-Orzo.jpeg"
       }
     
 ]

@@ -42,13 +42,46 @@ const GenerateButton = styled.button`
   }
 `;
 
-const MealItem = styled.p`
-  margin: 5px 0;
+const MealItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px 0;
+  cursor: pointer;
+`;
+
+const MealImage = styled.img`
+  width: 300px;
+  height:200px;
+  margin-bottom: 5px;
+  border-radius: 16px;
+`;
+
+const MealName = styled.p`
+  margin: 0;
+  padding: 0.8rem;
+`;
+
+const DayName = styled.p`
+  margin: 0;
+  font-weight: bold;
+  padding: 0.8rem;
+`;
+
+const IngredientsList = styled.ul`
+  list-style-type: disc; /* Use disc for bullet points */
+  padding-left: 20px; /* Add some left padding to the list */
+`;
+
+const Ingredient = styled.li`
+  margin-bottom: 5px;
+  text-transform: capitalize; /* Capitalize the first letter of each ingredient */
 `;
 
 export default function MealPlanGenerator() {
   const [mealPlan, setMealPlan] = useState([]);
   const [pastaCount, setPastaCount] = useState(0);
+  const [selectedRecipe, setSelectedRecipe] = useState(null);
 
   const getDayOfWeek = () => {
     const dayOfWeek = new Date().getDay();
@@ -85,6 +118,10 @@ export default function MealPlanGenerator() {
     return mealOption;
   };
 
+  const toggleIngredients = (recipeName) => {
+    setSelectedRecipe(selectedRecipe === recipeName ? null : recipeName);
+  };
+
   const generateMealPlan = () => {
     const daysOfWeek = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     const currentDayOfWeek = getDayOfWeek();
@@ -119,8 +156,17 @@ export default function MealPlanGenerator() {
       </LogoBar>
       <GenerateButton onClick={generateMealPlan}>Make My Menu</GenerateButton>
       {mealPlan.map((item, index) => (
-        <MealItem key={index}>
-          {item.day}: {item.meal}
+        <MealItem key={index} onClick={() => toggleIngredients(item.meal)}>
+          <DayName>{item.day}</DayName>
+          <MealImage src={recipes.find(recipe => recipe.name === item.meal)?.imageURL} alt={item.meal} />
+          <MealName>{item.meal}</MealName>
+          {selectedRecipe === item.meal && (
+            <IngredientsList>
+              {recipes.find(recipe => recipe.name === item.meal)?.ingredients.map((ingredient, index) => (
+                <Ingredient key={index}>{ingredient}</Ingredient>
+              ))}
+            </IngredientsList>
+          )}
         </MealItem>
       ))}
     </AppContainer>
