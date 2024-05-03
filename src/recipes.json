@@ -3,115 +3,121 @@
       "name": "Cacio e Pepe",
       "category": ["pasta", "vegetarian"],
       "ingredients": ["pasta", "pecorino cheese", "black pepper"],
-      "imageURL": "./images/Cacio-Pepe.jpeg"
+      "imageURL": "/images/Cacio-Pepe.jpeg"
     },
     {
       "name": "Chicken Wok",
       "category": "healthy",
       "ingredients": ["wok mix", "noodles", "chicken"],
-      "imageURL": "./images/Chicken-Wok.jpeg"
+      "imageURL": "/images/Chicken-Wok.jpeg"
     },
     {
       "name": "Grilled Shrimp Wrap",
       "category": "healthy",
       "ingredients": ["shrimp", "tortilla", "rucola", "cherry tomato", "avocado", "lemon juice", "guacamole spices", "onions"],
-      "imageURL": "./images/shrimp-wrap.jpeg"
+      "imageURL": "/images/shrimp-wrap.jpeg"
     },
     {
       "name": "Green thai noodles",
       "category": "comfy",
       "ingredients": ["shrimp", "egg noodles", "broccoli", "carrots", "mushrooms", "green curry", "coconut milk", "fish sauce", "soy sauce", "yellow paprika", "stock cube", "edamame"],
-      "imageURL": "./images/green-thai-noodles.jpeg"
+      "imageURL": "/images/green-thai-noodles.jpeg"
     },
     {
       "name": "Tilapia with rice and beans",
       "category": ["comfy", "healthy"],
       "ingredients": ["tilapia", "rice", "beans", "onions", "garlic", "lemon juice", "broccoli"],
-      "imageURL": "./images/tilapia-arroz-feijao.jpeg"
+      "imageURL": "/images/tilapia-arroz-feijao.jpeg"
     },
     {
       "name": "Minced meat spinach with mashed potatoes",
       "category": "comfy",
       "ingredients": ["minced meat", "potatoes", "spinach cream", "butter"],
-      "imageURL": "./images/spinach-potatoes-mincedmeat.jpeg"
+      "imageURL": "/images/spinach-potatoes-mincedmeat.jpeg"
     },
     {
         "name": "Veggie Pie",
         "category": ["comfy", "vegetarian"],
         "ingredients": ["flour", "eggs", "spinach", "zucchini", "carrots", "tofu", "mushrooms", "garlic", "onions", "nuts", "parmesan cheese"],
-        "imageURL": "./images/veggie-pie.jpeg"
+        "imageURL": "/images/veggie-pie.jpeg"
       },
       {
         "name": "Spaghetti Bolognesa",
         "category": ["comfy", "pasta"],
         "ingredients": ["minced meat", "spaghetti", "tomato puree", "celery", "bacon", "carrots"],
-        "imageURL": "./images/bolognesa.jpeg"
+        "imageURL": "/images/bolognesa.jpeg"
       },
       {
         "name": "Spaghetti Diabolique",
         "category": ["comfy", "pasta"],
         "ingredients": ["shrimp", "spaghetti", "tomato puree", "cream"],
-        "imageURL": "./images/diabolique.jpeg"
+        "imageURL": "/images/diabolique.jpeg"
       },
       {
         "name": "Chicken Salad",
         "category": "healthy",
         "ingredients": ["chicken", "lettuce", "cherry tomato", "feta", "cucumber", "mayo", "yogurt"],
-        "imageURL": "./images/Chicken-Salad.jpeg"
+        "imageURL": "/images/Chicken-Salad.jpeg"
       },
       {
         "name": "Tilapia with mashed sweet potatoes and broccoli",
         "category": ["comfy", "healthy"],
         "ingredients": ["tilapia", "sweet potatoes", "butter", "broccoli"],
-        "imageURL": "./images/Tilapia-Potatoes-Broccoli.jpeg"
+        "imageURL": "/images/Tilapia-Potatoes-Broccoli.jpeg"
       },
       {
         "name": "Shrimp Fried Rice",
         "category": "comfy",
         "ingredients": ["shrimp", "rice", "eggs", "spring onions"],
-        "imageURL": "./images/Fried-Rice.jpeg"
+        "imageURL": "/images/Fried-Rice.jpeg"
       },
       {
         "name": "Chicken with roasted veggies",
         "category": "comfy",
         "ingredients": ["chicken", "sweet potatoes", "pumpkin", "carrots", "garlic", "onions"],
-        "imageURL": "./images/Roasted-Chicken-Veggies.jpeg"
+        "imageURL": "/images/Roasted-Chicken-Veggies.jpeg"
       },
       {
         "name": "Salmon Spinach Pasta",
         "category": ["comfy", "pasta"],
         "ingredients": ["salmon", "pasta", "spinach", "peas", "parmesan cheese", "rosemary", "basil"],
-        "imageURL": "./images/Salmon-Pasta.jpeg"
+        "imageURL": "/images/Salmon-Pasta.jpeg"
       },
       {
         "name": "Mushroom Risotto",
         "category": ["comfy", "pasta", "vegetarian"],
         "ingredients": ["risotto rice", "mushrooms", "wine", "onions", "stock cube", "butter", "parmesan cheese"],
-        "imageURL": "./images/mushroom-risotto.jpeg"
+        "imageURL": "/images/mushroom-risotto.jpeg"
       },
       {
         "name": "Shrimp Risotto",
         "category": ["comfy", "pasta"],
         "ingredients": ["risotto rice", "shrimp", "lemon", "wine", "onions", "stock cube", "butter", "parmesan cheese"],
-        "imageURL": "./images/shrimp-risotto.jpeg"
+        "imageURL": "/images/shrimp-risotto.jpeg"
       },
       {
         "name": "Zucchini Lasagna",
         "category": "healthy",
         "ingredients": ["zucchini", "tomato passata", "mushrooms", "sliced chicken", "cheese", "parmesan cheese"],
-        "imageURL": "./images/zucchini-lasagna.jpeg"
+        "imageURL": "/images/zucchini-lasagna.jpeg"
       },
       {
         "name": "Mushroom Burguer",
         "category": "vegetarian",
         "ingredients": ["burguer bread", "portobello mushroom", "flour", "panko", "eggs", "grated cheese"],
-        "imageURL": "./images/mushroom-burguer.jpeg"
+        "imageURL": "/images/mushroom-burguer.jpeg"
       },
       {
         "name": "Fries",
         "category": "vegetarian",
         "ingredients": ["potatoes"],
-        "imageURL": "./images/fries.jpeg"
+        "imageURL": "/images/fries.jpeg"
+      },
+      {
+        "name": "Sun Dried Chicken Orzo",
+        "category": ["comfy", "pasta"],
+        "ingredients": ["orzo", "sun dried tomatoes", "chicken breast", "garlic", "spinach", "stock cube", "cream", "parmesan cheese"],
+        "imageURL": "/images/"
       }
     
 ]
